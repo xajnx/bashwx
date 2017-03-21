@@ -5,15 +5,15 @@ For the script to run correctly you will need to obtain an API key from https://
 and add it to "app_id = " value. The service is free. Following that, place bashwx in /usr/sbin/ and setup a chrontab to run
 it hourly or half-hourly or whenever you want. I intitally wanted the script to run evry time that .bashrc was called but that will produce an error.
 
-When you login to your shell the script will output the following:
-[Local weather]: 81.68 F, with clear sky
-[Your public IP is]: x.x.x.x [Local IP]: 192.168.x.x
--=skywalker@deathstar=-:[~/scripts/python/working]#
+When you login to your shell the script will output the following:<br>
+[Local weather]: 81.68 F, with clear sky<br>
+[Your public IP is]: x.x.x.x [Local IP]: 192.168.x.x<br>
+-=skywalker@deathstar=-:[~/scripts/python/working]#<br>
 
 Additionally you can add the following lines to the bottm of your .bashrc to offer more info:
 
-echo -e "Welcome to \e[0;37m[$(hostname)]\e[0m You are logged in as user \e[0;37m[$USER]\e[0m"
-echo -e "[Local time]: \e[0;37m$(date)\e[0m."
+echo -e "Welcome to \e[0;37m[$(hostname)]\e[0m You are logged in as user \e[0;37m[$USER]\e[0m"<br>
+echo -e "[Local time]: \e[0;37m$(date)\e[0m."<br>
 
 All highlighting is white text so you may want to change that depending of your Term profile.
 
