@@ -12,7 +12,7 @@ import errno
 
 home = os.getenv("HOME")
 #build the query with the api keys given to us from OW
-app_id = ' ' ##insert your API key here to retrieve weather data
+app_id = '07c83c68d225576bac8ad3a33f187d7a'
 base_url = 'http://api.openweathermap.org/data/2.5/weather?'
 headers = {'user-agent':'Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0'} #pretend we're a browser
 
@@ -47,8 +47,8 @@ try:
     f = open(out_file, 'w')
     f.writelines([item for item in lines[:-2]])
 
-    w = "echo -e \"[Local weather]: \e[0;37m\"" + str(wx_t) +  "\"\e[0m F, with \e[0;37m\"" + str(wx_c) + "\"\e[0m\""
-    i = "echo -e \"[Your public IP is]: \e[0;37m\"" + ip + "\"\e[0m [Local IP]: \e[0;37m\"" + locip + "\"\e[0m\""
+    w = "echo -e \"\e[0;37m[\e[0mLocal weather\e[0;37m]\e[0m: \e[0;37m\"" + str(wx_t) +  "\" F\e[0m with \e[0;37m\"" + str(wx_c) + "\"\e[0m\""
+    i = "echo -e \"\e[0;37m[\e[0mYour public IP is\e[0;37m]\e[0m: \e[0;37m\"" + ip + "\"\e[0m \e[0;37m[\e[0mLocal IP\e[0;37m]\e[0m: \e[0;37m\"" + locip + "\"\e[0m\""
 
     out = [str(w), str(i)]
     f.writelines('\n'.join(out))
