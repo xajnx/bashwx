@@ -6,7 +6,7 @@ from colr import Colr as C
 import os
 
 #build the query with the api keys given to us from OW
-api_id = '705c1ebaea010d2e' ##insert your API key here to retrieve weather data
+api_id = '' ##insert your API key here to retrieve weather data
 URLS = ['http://api.wunderground.com/api/'+api_id+'/conditions/q/autoip.json',
         'http://www.ourmanna.com/verses/api/get/?format=json',
         'http://quotes.rest/qod.json',
@@ -15,7 +15,6 @@ URLS = ['http://api.wunderground.com/api/'+api_id+'/conditions/q/autoip.json',
 home_dir = os.environ['HOME']
 work_dir = home_dir + '/bashwx/'
 plus_file = work_dir + 'motdplus'
-alerts_file = work_dir + 'alerts'
 
 try:
     requests = (grequests.get(url) for url in URLS)
