@@ -6,10 +6,11 @@ from colr import Colr as C
 import os
 
 #build the query with the api keys given to us from OW
-URLS = ['http://api.wunderground.com/api/705c1ebaea010d2e/conditions/q/TX/Winona.json',
-        'http://api.wunderground.com/api/705c1ebaea010d2e/alerts/q/TX/Winona.json',
-        'http://api.wunderground.com/api/705c1ebaea010d2e/forecast/q/TX/Winona.json',
-        'http://api.wunderground.com/api/705c1ebaea010d2e/astronomy/q/TX/Winona.json',
+api_key = ' ' #insert wunderground api key here
+URLS = ['http://api.wunderground.com/api/7' + api_key + '/conditions/q/autoip.json',
+        'http://api.wunderground.com/api/' + api_key + '/alerts/q/autoip.json',
+        'http://api.wunderground.com/api/' + api_key + '/forecast/q/autoip.json',
+        'http://api.wunderground.com/api/'+ api_key + '/astronomy/q/autoip.json',
         'http://httpbin.org/ip',
         'http://labs.bible.org/api/?passage=votd&type=json']
 
