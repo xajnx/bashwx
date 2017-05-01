@@ -1,4 +1,4 @@
-# bashwx -A.Nelson- aaron.nelson805@gmail.com
+# bashwx/bashwxplus0.1 -A.Nelson- 
 bashwx is a python3 script that will put the current weather conditions, public IP and local IP in your .bashrc file to be displayed when you login
 
 For the script to run correctly you will need to obtain an API key from https://home.openweathermap.org/users/sign_up
@@ -18,4 +18,23 @@ echo -e "[Local time]: \e[0;37m$(date)\e[0m."<br>
 All highlighting is white text so you may want to change that depending of your Term profile.
 
 Hope you enjoy it!
+
+**bashwxplus**
+
+bashwxplus offers more data than bashwx. It will display your MOTD in a rainbow color format and much more weather data as well as astronomy. Instead of using openweathermap.org's api I opted for weatherunderground which offers more weather related data for the same amount of api calls. again it is free unless you plan on running over your call limit. 
+
+to use **bashwxplus** you will have to run the script as with bashwx but in your .bashrc file you want to add the following lines:
+
+cat ~/bashwx/motdplus<br>
+echo<br>
+if [ -s ~/bashwx/.alerts ]; then<br>
+  echo ' To view active weather alerts type ''cat ~/bashwx/.alerts'<br>
+fi<br>
+
+setup a cron job to run every fifteen minutes:
+
+$> crontab -e
+0/15 * * * * ~/bashwx/bashwxplus0.1.py
+
+
 
