@@ -21,9 +21,9 @@ Hope you enjoy it!
 
 **bashwxplus**
 
-bashwxplus offers more data than bashwx. It will display your MOTD in a rainbow color format and much more weather data as well as astronomy. Instead of using openweathermap.org's api I opted for weatherunderground which offers more weather related data for the same amount of api calls. again it is free unless you plan on running over your call limit. 
+bashwxplus offers more data than bashwx. It will display your MOTD in a rainbow color format and much more weather data as well as astronomy. Instead of using openweathermap.org's api I opted for weatherunderground which offers more weather related data for the same amount of api calls. It is also free unless you plan on running over your call limit. You can sign up for an API key here: "https://polish.wunderground.com/weather/api/d/docs" 
 
-to use **bashwxplus** you will have to run the script as with bashwx but in your .bashrc file you want to add the following lines:
+to use **bashwxplus** you will have to run the script as with bashwx but in your .bashrc file you want to add the following lines <i>to the bottom</i> of the file.a
 
 cat ~/bashwx/motdplus<br>
 echo<br>
@@ -33,8 +33,8 @@ fi<br>
 
 setup a cron job to run every fifteen minutes:
 
-$> crontab -e
-0/15 * * * * ~/bashwx/bashwxplus0.1.py
+$> crontab -e<br>
+0/15 * * * * ~/bashwx/bashwxplus0.1.py<br>
 
 
 
