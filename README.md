@@ -37,7 +37,9 @@ $> crontab -e<br>
 0/15 * * * * ~/bashwx/bashwxplus0.1.py<br>
 
 the output will appear as follows:
+
 **MOTD HERE** 
+
 Welcome [skywalker]<br>
 <br>
  Your Public IP is [x.x.x.x] Your Local IP is [192.168.2.5]<br>
@@ -60,6 +62,6 @@ Welcome [skywalker]<br>
 <br>
  Verse of the Day: ["You also are among them, called to belong to Jesus Christ." - Romans 1:6]<br>
 <br>
- To view active weather alerts type cat ~/bashwx/.alerts<br>
+ To view active weather alerts type "cat /home/user/bashwx/.alerts"<br>
 skywalker@endor:~$ <br>
 
