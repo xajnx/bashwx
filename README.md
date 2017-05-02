@@ -23,7 +23,7 @@ Hope you enjoy it!
 
 bashwxplus offers more data than bashwx. It will display your MOTD in a rainbow color format and much more weather data as well as astronomy. Instead of using openweathermap.org's api I opted for weatherunderground which offers more weather related data for the same amount of api calls. It is also free unless you plan on running over your call limit. You can sign up for an API key here: https://www.wunderground.com/weather/api/ 
 
-to use **bashwxplus** you will have to run the script as with bashwx but in your .bashrc file you want to add the following lines <i>to the bottom</i> of the file.a
+to use **bashwxplus** you will have to run the script as with bashwx but in your .bashrc file you want to add the following lines to the bottom of the file.
 
 cat ~/bashwx/motdplus<br>
 echo<br>
@@ -37,41 +37,29 @@ $> crontab -e<br>
 0/15 * * * * ~/bashwx/bashwxplus0.1.py<br>
 
 the output will appear as follows:
-
-    ▄████████ ███▄▄▄▄   ████████▄   ▄██████▄     ▄████████ 
-   ███    ███ ███▀▀▀██▄ ███   ▀███ ███    ███   ███    ███ 
-   ███    █▀  ███   ███ ███    ███ ███    ███   ███    ███ 
-  ▄███▄▄▄     ███   ███ ███    ███ ███    ███  ▄███▄▄▄▄██▀ 
- ▀▀███▀▀▀     ███   ███ ███    ███ ███    ███ ▀▀███▀▀▀▀▀   
-   ███    █▄  ███   ███ ███    ███ ███    ███ ▀███████████ 
-   ███    ███ ███   ███ ███   ▄███ ███    ███   ███    ███ 
-   ██████████  ▀█   █▀  ████████▀   ▀██████▀    ███    ███ 
-                                                ███    ███ 
- 
- 
-Welcome [skywalker]
-
- Your Public IP is [74.196.140.225] Your Local IP is [192.168.2.5]
-
- Weather at [Winona, TX] from station [KTXTYLER60]
-
- Today's Forecast: [Sunny. High near 85F. Winds S at 10 to 15 mph.]
- Conditions: [Partly Cloudy]
- Winds: [Calm]
- Temp: [62.1 F] feels like: [62.1 F]
- Heat Index: [NA F] Wind Chill: [NA F] Dew Point: [58 F]
- Humidity: [86%]
- Barometric Pressure: [1016 mB (+)]
- Rain Gauge: [0.00 in hourly] [0.00 in daily]
- Moon Phase: [Waxing Crescent] illuminated [44%]
- Sunrise: [6:32] Sunset: [20:02]
- UV Levels: [1.0 mW/cm2] Radiation Level [148 W/m2] Visibility: [10.0 Miles]
- Active alert: [Flood Warning]
- Sabine River: [Latest Stage: 11.55ft]
- [Last Updated on May 2, 8:14 AM CDT]
-
- Verse of the Day: ["You also are among them, called to belong to Jesus Christ." - Romans 1:6]
-
- To view active weather alerts type cat ~/bashwx/.alerts
-skywalker@endor:~$ 
+**MOTD HERE** 
+Welcome [skywalker]<br>
+<br>
+ Your Public IP is [x.x.x.x] Your Local IP is [192.168.2.5]<br>
+<br>
+ Weather at [City, ST] from station [STATIONID]<br>
+<br>
+ Today's Forecast: [Sunny. High near 85F. Winds S at 10 to 15 mph.]<br>
+ Conditions: [Partly Cloudy]<br>
+ Winds: [Calm]<br>
+ Temp: [62.1 F] feels like: [62.1 F]<br>
+ Heat Index: [NA F] Wind Chill: [NA F] Dew Point: [58 F]<br>
+ Humidity: [86%]<br>
+ Barometric Pressure: [1016 mB (+)]<br>
+ Rain Gauge: [0.00 in hourly] [0.00 in daily]<br>
+ Moon Phase: [Waxing Crescent] illuminated [44%]<br>
+ Sunrise: [6:32] Sunset: [20:02]<br>
+ UV Levels: [1.0 mW/cm2] Radiation Level [148 W/m2] Visibility: [10.0 Miles]<br>
+ Active alert: [Flood Warning]<br>
+ [Last Updated on May 2, 8:14 AM CDT]<br>
+<br>
+ Verse of the Day: ["You also are among them, called to belong to Jesus Christ." - Romans 1:6]<br>
+<br>
+ To view active weather alerts type cat ~/bashwx/.alerts<br>
+skywalker@endor:~$ <br>
 
