@@ -4,6 +4,7 @@ import grequests, socket
 from colorama import Fore, Back, Style
 from colr import Colr as C
 import os
+from random import randint
 
 #build the query with the api keys given to us from OW
 api_key = ' ' #insert wunderground api key here
@@ -103,6 +104,7 @@ try:
     illum = astro['percentIlluminated']  
     sunrise = str(astro['sunrise']['hour'] + ':' + astro['sunrise']['minute'])
     sunset = str(astro['sunset']['hour'] + ':' + astro['sunset']['minute'])
+        
     #motd 
     f = open('/etc/motd', 'r')
     motd = f.readlines()
@@ -111,8 +113,16 @@ try:
     #username
     user = os.environ['LOGNAME']
 
+    #randomize motd colorscheme
+    def randcolor():
+        colors = ['red', 'blue', 'green', 'cyan', 'orange']
+        n = (len(colors))
+        o = randint(0, n-1)
+        color = colors[o]
+        return color
+
     with open(plus_file, 'w') as f:
-        f.write(str(C(' '.join(motd)).gradient(name='blue')))
+        f.write(str(C(' '.join(motd)).gradient(name=randcolor())))
         f.write(Style.BRIGHT + '\nWelcome [' + Fore.CYAN + user + Fore.RESET + ']\n\n' + Style.RESET_ALL)
         f.write(Style.BRIGHT  + 'Your ' + Fore.CYAN + 'Public IP ' + Fore.RESET + 'is [' + Fore.CYAN + p_ip + Fore.RESET + '] Your ' + Fore.CYAN + 'Local IP ' + Fore.RESET + 'is [' + Fore.CYAN + locip + Fore.RESET + ']\n\n' + Style.RESET_ALL)
         f.write(' Weather at [' + Fore.CYAN + Style.BRIGHT + local + Style.RESET_ALL + '] from station [' + Fore.CYAN + Style.BRIGHT + wx_station + Style.RESET_ALL + ']\n\n')
